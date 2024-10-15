@@ -1,0 +1,162 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Georgio', serif;
+    color: #ffffff;
+}
+
+body {
+    background-image: url('fondo.jpg'); /* Cambia 'fondo.jpg' por la imagen de fondo que desees */
+    background-size: cover; /* Para cubrir toda la pantalla */
+    background-position: center; /* Centra la imagen de fondo */
+    line-height: 1.6;
+    
+}
+
+/* Cabecera con logo a la izquierda y menú centrado */
+header {
+    display: flex;
+    justify-content: space-between; /* Espacio entre el logo y el menú */
+    align-items: center;
+    padding: 20px;
+    background-color: #400101;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+/* Logo alineado a la izquierda */
+header .logo {
+    margin-left: 20px; /* Espacio del logo al borde izquierdo */
+}
+
+header .logo img {
+    height: 90px;
+}
+
+/* Menú centrado */
+nav.menu {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center; /* Centra el menú */
+}
+
+nav.menu ul {
+    display: flex;
+    list-style: none;
+}
+
+nav.menu ul li {
+    margin-right: 20px;
+}
+
+nav.menu ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav.menu ul li a:hover {
+    color: #006622;
+}
+
+/* Redes sociales fijas a la izquierda */
+.social-media-fixed {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+}
+
+.social-media-fixed a img {
+    width: 50px;
+    padding: 5px;
+    background-color: #400101;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.social-media-fixed a img:hover {
+    background-color: #4d0000;
+}
+
+/* Estilos para el contenido */
+h1, h2 {
+    color: #006622;
+    font-size: 2.5rem;
+    margin: 20px 0; /* Añadir margen para separación */
+}
+
+p {
+    color: #cccccc;
+    font-size: 1rem;
+    margin: 20px 0;
+}
+
+/* Galería de Piercings */
+.piercing-gallery {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en múltiples líneas */
+    justify-content: center; /* Centra los elementos */
+    padding: 20px; /* Espaciado interno en la galería */
+}
+
+.piercing-item {
+    position: relative;
+    margin: 20px; /* Espacio entre los elementos */
+    width: calc(50% - 40px); /* Dos elementos por fila, menos el margen */
+    max-width: 300px; /* Ancho máximo para las imágenes */
+}
+
+.piercing-item img {
+    width: 100%; /* Ancho completo del contenedor */
+    height: 200px; /* Altura fija para todas las imágenes */
+    object-fit: cover; /* Asegura que la imagen mantenga proporciones y cubra el área */
+    border-radius: 10px; /* Bordes redondeados */
+    transition: transform 0.3s ease; /* Transición para el efecto hover */
+}
+
+/* Overlay que cubre completamente la imagen */
+.piercing-item .overlay {
+    position: absolute;
+    top: 0; /* Alinea al top */
+    left: 0; /* Alinea al left */
+    right: 0; /* Alinea al right */
+    bottom: 0; /* Alinea al bottom */
+    background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    color: #ffffff;
+    display: flex; /* Usamos flexbox para centrar el texto */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    font-size: 20px; /* Tamaño del texto */
+    opacity: 0; /* Comienza oculto */
+    transition: opacity 0.3s ease; /* Transición suave para el hover */
+}
+
+.piercing-item:hover .overlay {
+    opacity: 1; /* Mostrar en hover */
+}
+
+.piercing-item:hover img {
+    transform: scale(1.02); /* Efecto zoom en hover */
+}
+
+/* Pie de página */
+footer {
+    background-color: #400101;
+    color: #ffffff;
+    text-align: center;
+    padding: 1px;
+    position: fixed; /* Fijo en la parte inferior */
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Ancho completo */
+    z-index: 100; /* Asegura que esté por encima de otros elementos */
+}

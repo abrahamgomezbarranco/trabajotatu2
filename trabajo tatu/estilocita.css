@@ -1,0 +1,79 @@
+
+body {
+    background-color: #ffffff;
+    background-image: url('fondocita.jpg'); /* Añade la imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #ffffff;
+    font-family: 'Georgio', serif;
+}
+
+/* Estilos para la página de pedir cita */
+.cita-container {
+    margin-top: 100px;
+    padding: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    text-align: left;
+}
+
+.cita-container h3 {
+    color: #006622;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.cita-container p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #cccccc;
+}
+
+.cita-container label {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-top: 10px;
+    display: block;
+}
+
+.cita-container input,
+.cita-container select,
+.cita-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #333333;
+    background-color: #262626;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.cita-container input:focus,
+.cita-container select:focus,
+.cita-container textarea:focus {
+    outline: none;
+    border-color: #006622;
+}
+
+.btn-submit {
+    background-color: #400101;
+    color: #ffffff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #4d0000;
+}

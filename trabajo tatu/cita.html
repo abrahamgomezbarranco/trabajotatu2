@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilocita.css">
+    <title>Pedir Cita - Liquid Ink</title>
+</head>
+<body>
+    
+    <!-- Formulario para pedir cita -->
+    <div class="cita-container">
+        <h3>Pedir Cita</h3>
+        <p>Por favor, rellena el siguiente formulario para solicitar una cita. Nos pondremos en contacto contigo para confirmar.</p>
+
+        <form action="enviar-cita.php" method="post">
+            <label for="nombre">Nombre Completo:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+
+            <label for="servicio">Selecciona el Servicio:</label>
+            <select id="servicio" name="servicio" required>
+                <option value="tatuaje">Tatuaje</option>
+                <option value="piercing">Piercing</option>
+                <option value="laser">Eliminación de Tatuaje (Láser)</option>
+            </select>
+
+            <label for="fecha">Fecha Preferida:</label>
+            <input type="date" id="fecha" name="fecha" required>
+
+            <label for="mensaje">Comentarios Adicionales:</label>
+            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Detalles o preguntas sobre tu cita"></textarea>
+
+            <button type="submit" class="btn-submit">Solicitar Cita</button>
+        </form>
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>© 2024 Liquid Ink. Todos los derechos reservados.</p>
+        <p>Email: contacto@liquidink.com | Teléfono: +123 456 7890</p>
+    </footer>
+</body>
+</html>

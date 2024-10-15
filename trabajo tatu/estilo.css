@@ -1,0 +1,191 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Georgio', serif;
+    color: #ffffff;
+}
+
+body {
+    background-color: #000000;
+    line-height: 1.6;
+}
+
+/* Cabecera con logo a la izquierda y menú centrado */
+header {
+    display: flex;
+    justify-content: space-between; /* Espacio entre el logo y el menú */
+    align-items: center;
+    padding: 20px;
+    background-color: #400101;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+/* Logo alineado a la izquierda */
+header .logo {
+    margin-left: 20px; /* Espacio del logo al borde izquierdo */
+}
+
+header .logo img {
+    height: 90px;
+}
+
+/* Menú centrado */
+nav.menu {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center; /* Centra el menú */
+}
+
+nav.menu ul {
+    display: flex;
+    list-style: none;
+}
+
+nav.menu ul li {
+    margin-right: 20px;
+}
+
+nav.menu ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav.menu ul li a:hover {
+    color: #006622;
+}
+
+/* Redes sociales fijas a la izquierda */
+.social-media-fixed {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+}
+
+.social-media-fixed a img {
+    width: 50px;
+    padding: 5px;
+    background-color: #400101;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.social-media-fixed a img:hover {
+    background-color: #4d0000;
+}
+
+/* Sección Hero (Inicio) */
+.hero {
+    height: 100vh;
+    background-image: url('fondohome.jpg'); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative; /* Para la superposición */
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Capa oscura sobre la imagen */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Sombra en el texto */
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: #cccccc;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Sombra en el texto */
+}
+
+.hero-content .btn {
+    padding: 15px 30px;
+    background-color: #006622;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hero-content .btn:hover {
+    background-color: #004d1a;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Contenedor principal (Home) */
+#home {
+    padding: 60px 20px; /* Espacio para la cabecera fija */
+}
+
+/* Imagen destacada debajo del Hero */
+#featured-image {
+    padding: 0; /* Eliminar padding */
+    text-align: center;
+}
+
+.image-container {
+    display: flex; /* Usar flexbox para alinear las imágenes */
+    justify-content: center; /* Centra las imágenes */
+    gap: 20px; /* Espacio entre las imágenes */
+    margin-top: -10px; /* Usar margen negativo para subir la imagen */
+}
+
+.featured-image {
+    max-width: 45%; /* Ajustar ancho para que quepan dos imágenes */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+.featured-image:hover {
+    transform: scale(1.05);
+}
+
+/* Pie de página */
+footer {
+    background-color: #400101;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    height: 80px    ;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Ancho completo */
+    z-index: 100; /* Asegura que esté por encima de otros elementos */
+}

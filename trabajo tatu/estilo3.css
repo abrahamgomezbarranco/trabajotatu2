@@ -1,0 +1,167 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Georgio', serif;
+    color: #ffffff;
+}
+
+body {
+    background-color: #000000;
+    line-height: 1.6;
+   
+}
+
+/* Cabecera con logo a la izquierda y menú centrado */
+header {
+    display: flex;
+    justify-content: space-between; /* Espacio entre el logo y el menú */
+    align-items: center;
+    background-color: #400101;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+/* Logo alineado a la izquierda */
+header .logo {
+    margin-left: 20px; /* Espacio del logo al borde izquierdo */
+}
+
+header .logo img {
+    height: 90px;
+}
+
+/* Menú centrado */
+nav.menu {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center; /* Centra el menú */
+}
+
+nav.menu ul {
+    display: flex;
+    list-style: none;
+}
+
+nav.menu ul li {
+    margin-right: 20px;
+}
+
+nav.menu ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav.menu ul li a:hover {
+    color: #006622;
+}
+
+/* Redes sociales fijas a la izquierda */
+.social-media-fixed {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+}
+
+.social-media-fixed a img {
+    width: 50px;
+    padding: 5px;
+    background-color: #400101;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.social-media-fixed a img:hover {
+    background-color: #4d0000;
+}
+
+/* Contenedor para alinear el carrusel y el texto */
+.artist-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Alinear el inicio del carrusel y el texto */
+    margin-top: 110px; /* Para compensar el espacio del header fijo */
+    padding: 20px; /* Espacio alrededor del contenedor */
+}
+
+/* Estilos del carrusel */
+.carousel {
+    width: 50%; /* Carrusel ocupa el 50% del ancho */
+}
+
+.carousel img {
+    height: 280px; /* Ajusta la altura según lo necesites */
+    object-fit: cover; /* Asegura que la imagen llene el espacio */
+}
+
+/* Estilos del texto */
+.artist-info {
+    width: 45%; /* Texto ocupa el 45% del ancho */
+    padding-right: 20px; /* Espacio entre el texto y el carrusel */
+    text-align: left;
+}
+
+.artist-info h3 {
+    font-size: 1.8rem;
+    color: #006622;
+    margin-bottom: 20px;
+}
+
+.artist-info p {
+    font-size: 1rem;
+    color: #cccccc;
+    line-height: 1.6;
+}
+
+/* Pie de página */
+footer {
+    background-color: #400101;
+    color: #ffffff;
+    text-align: center;
+    height: 80px;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Ancho completo */
+    z-index: 100; /* Asegura que esté por encima de otros elementos */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .artist-container {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        align-items: center; /* Centrar los elementos */
+    }
+    
+    .carousel, .artist-info {
+        width: 100%; /* Ambos ocupan el ancho completo */
+    }
+
+    .artist-info {
+        padding-right: 0; /* Eliminar espacio a la derecha en pantallas pequeñas */
+        text-align: center; /* Centrar texto en pantallas pequeñas */
+    }
+
+    nav.menu ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    nav.menu ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .social-media-fixed {
+        gap: 10px; /* Espacio entre los iconos de redes sociales en pantallas pequeñas */
+    }
+}
+
